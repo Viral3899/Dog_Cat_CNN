@@ -22,7 +22,7 @@ class dogcat:
         # summarize model
         #model.summary()
         imagename = self.filename
-        test_image = image.load_img(imagename, target_size = (64, 64))
+        test_image = image.load_img(imagename, color_mode='grayscale',target_size = (64, 64))
         test_image = image.img_to_array(test_image)
         test_image = np.expand_dims(test_image, axis = 0)
         result = model.predict(test_image)
